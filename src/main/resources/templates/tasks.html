@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tasks</title>
+</head>
+<body>
+<h1>Tasks</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Deadline</th>
+        <th>Completed</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Loopa genom tasks och skapa tabellrader för varje task -->
+    <tr th:each="task : ${tasks}">
+        <td th:text="${task.id}"></td>
+        <td th:text="${task.name}"></td>
+        <td th:text="${task.description}"></td>
+        <td th:text="${task.deadline}"></td>
+        <td th:text="${task.completed}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
